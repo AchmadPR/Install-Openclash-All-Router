@@ -13,5 +13,5 @@ bash curl jsonfilter ca-certificates ipset ip-full \
 iptables-mod-tproxy kmod-tun luci-compat
 opkg install luci-app-openclash
 echo "Instalasi Selesai, silahkan reboot perangkat anda"
-echo "Auto Installer Config Editor Openclash by Achmad PR"
+echo "Auto Installer Openclash by Achmad PR"
 
