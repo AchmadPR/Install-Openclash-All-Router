@@ -4,6 +4,7 @@ echo "Auto Installer Openclash by Achmad PR"
 sed -i 's/option check_signature/# option check_signature/g' /etc/opkg.conf
 echo "src/gz custom_generic https://raw.githubusercontent.com/lrdrdn/my-opkg-repo/main/generic" >> /etc/opkg/customfeeds.conf
 echo "src/gz custom_arch https://raw.githubusercontent.com/lrdrdn/my-opkg-repo/main/$(cat /etc/os-release | grep OPENWRT_ARCH | awk -F '"' '{print $2}')" >> /etc/opkg/customfeeds.conf
+opkg update
 opkg list-installed | grep dnsmasq
 opkg remove dnsmasq
 opkg update && opkg install dnsmasq-full
